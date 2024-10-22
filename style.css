@@ -1,0 +1,98 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Banner Styles */
+#banner {
+    height: 100vh;
+    margin-top: 60px;
+}
+.swiper-container {
+    position: relative;
+}
+.swiper-pagination {
+    position: relative;
+    bottom: 50px; /* Ajuste o valor conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: auto; /* Para garantir que a pagination fique acima das imagens */
+}
+.swiper-slide .flex {
+    display: flex;
+    justify-content: space-between;
+}
+.swiper-slide img {
+    max-width: 50%;
+    height: auto;
+}    
+.swiper-slide-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Services Styles */
+.service-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Testimonials Styles */
+.testimonial-card {
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form Styles */
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #3b82f6;
+}
+
+/* Footer Styles */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #banner {
+        height: 50vh;
+    }
+
+    .swiper-slide-content {
+        padding: 10px;
+    }
+}
+
+/* Animation Styles */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Custom animations can be added here */
